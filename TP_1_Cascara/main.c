@@ -3,6 +3,7 @@
 #include <conio.h>
 #include "funciones.h"
 
+
 int es_positivo(float a);
 int es_decimal(float a);
 float ingresar_numero();
@@ -26,6 +27,10 @@ int main()
     float x=0.00;
     float y=0.00;
     char respuesta;
+    int valida_x=0;
+    int valida_y=0;
+
+
 
 
 
@@ -33,18 +38,38 @@ int main()
     while(seguir=='s')
     {
 
-		printf("\n         ษอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป");
-		printf("\n         บ               :: C A L C U L A D O R A ::                 บ");
-		printf("\n         ฬอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออน");
+		printf("\n         รรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรยป");
+		printf("\n         ยบ               :: C A L C U L A D O R A ::                 ยบ");
+		printf("\n         รรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรรยน");
         printf("\nBIEVENIDOS A LA CALCULADORA !!\n\n");
-        printf("\n1- Ingresar 1er operando (A)=%.2f ", x );
-        printf("\n2- Ingresar 2do operando (B)=%.2f", y);
-        printf("\n3- Calcular la suma (A)=%.2f y (B)=%.2f", x, y);
-        printf("\n4- Calcular la resta (A)=%.2f y (B)=%.2f", x, y);
-        printf("\n5- Calcular la division (A)=%.2f y (B)=%.2f", x, y);
-        printf("\n6- Calcular la multiplicacion (A)=%.2f y (B)=%.2f", x, y);
-        printf("\n7- Calcular el factorial (A!)=%.2f ", x);
-        printf("\n8- Calcular todas las operacione\n");
+          if (valida_x==0)
+           {
+
+                printf("\n1- Ingresar 1do operando (A)=x");
+           }
+           else
+            {
+
+            printf("\n2- Ingresar 2do operando (A)=%.2f", x);
+            }
+
+          if (valida_y==0)
+           {
+
+                printf("\n2- Ingresar 2do operando (B)=y");
+           }
+           else
+            {
+
+            printf("\n2- Ingresar 2do operando (B)=%.2f", y);
+            }
+
+        printf("\n3- Calcular la suma de (A) y de (B)");
+        printf("\n4- Calcular la resta de (A) y de (B)");
+        printf("\n5- Calcular la division entre (A) y (B)");
+        printf("\n6- Calcular la multiplicacion de (A) y (B)");
+        printf("\n7- Calcular el factorial (A!)");
+        printf("\n8- Calcular todas las operaciones\n");
         printf("\n9- Salir\n");
 
         scanf("%d",&opcion);
@@ -56,11 +81,14 @@ int main()
 
                 a= ingresar_numero();
                 x=a;
+                valida_x=1;
+
 
                 break;
             case 2:
                 b= ingresar_numero();
                 y=b;
+                valida_y=1;
 
 
                 break;
